@@ -1,0 +1,3 @@
+[submodule "Terraform-AWS-Project"]
+	path = Terraform-AWS-Project
+	url = https://github.com/imsalmanmalik/Terraform-AWS-Project.git
