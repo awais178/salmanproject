@@ -6,12 +6,12 @@ services:
        - 80:80
 
      volumes:
-         - ./php_code/:/var/www/html/
+         - ./phpfile/:/var/www/html/
 
    php:
-     build: ./php_code/
+     build: ./phpfile/
      expose:
        - 9000
      volumes:
-        - ./php_code/:/var/www/html/
+        - ./phpfile/:/var/www/html/
 
