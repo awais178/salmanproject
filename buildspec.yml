@@ -13,18 +13,15 @@ phases:
 
   build:
     commands:
-      - echo "Build started on `date`"
+      - echo "Build started on $(date)"
       - echo "Building the Docker images"
-      - docker-compose build
+      - docker-compose -f docker-compose.yml build
       - echo "Build completed"
 
   post_build:
     commands:
       - echo "Tagging and pushing Docker images to Docker Hub"
-      - docker tag nginx:latest awais1230/nginx:newnginxlatest
-      - docker tag php:latest awais1230/php:newphplatest
-      - docker push awais1230/nginx:newnginxlatest
-      - docker push awais1230/php:newphplatest
+      - docker-compose -f docker-compose.yml push
       - echo "Docker images pushed"
 
 artifacts:
