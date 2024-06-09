@@ -1,3 +1,4 @@
 #!/bin/bash
-
-docker-compose up -d --build
+# Install dependencies or perform other setup tasks
+cd /home/ubuntu/newdocker-project
+docker-compose pull
