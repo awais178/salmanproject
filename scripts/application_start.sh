@@ -1,3 +1,6 @@
 #!/bin/bash
 chmod +x before_install.sh after_install.sh application_start.sh validate_service.sh
-# Perform any application-specific initialization here
+#!/bin/bash
+# Start the Docker containers
+cd /home/ubuntu/newdocker-project
+docker-compose up -d
