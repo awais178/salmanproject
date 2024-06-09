@@ -1,10 +1,7 @@
 #!/bin/bash
 # Install dependencies or perform other setup tasks
 
-# Navigate to the root directory of the Git repository
-cd $CODEDEPLOYMENT_SOURCE
-
-# Check if the docker-compose.yml file exists
+# Check if the docker-compose.yml file exists in the root directory
 if [ -f docker-compose.yml ]; then
     # If the file exists, pull Docker images using docker-compose
     docker-compose pull
@@ -13,3 +10,4 @@ else
     echo "Error: docker-compose.yml file not found."
     exit 1
 fi
+
